@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <style>
+  .start-fight {
+    background: #508aa8;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .start-fight:hover {
+    background: #73a1b9;
+  }
+
+  .start-fight:disabled {
+    background: #b9d0dc;
+  }
+
   .chevron {
     margin-left: 4px;
     display: inline-block;
@@ -20,7 +39,7 @@
   "
 >
   <h3>Welcome to the Arena!</h3>
-  <button id="start-fight">FIGHT!</button>
+  <button class="start-fight" id="start-fight">FIGHT!</button>
   <div id="errors" style="color: #d05353;"></div>
   <h4 style="margin-bottom: 8px; cursor: pointer;" id="list-fighters-header">
     Fighters
@@ -34,7 +53,7 @@
     </div>
   </h4>
   <div id="list-fighters" style="overflow: hidden;" class="fighter-list"></div>
-  <h4 style="margin-bottom: 12px;">Manage your fighters:</h4>
+  <h4 style="margin-bottom: 12px;">Add a fighter:</h4>
   <div style="display: flex;">
     <label for="fighter-name">Fighter Name: </label>
     <input type="text" id="fighter-name" style="margin-left: 4px;" />

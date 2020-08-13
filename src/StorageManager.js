@@ -70,14 +70,17 @@ class StorageManager {
       errors.innerHTML = "";
     }
 
+    const startFight = document.getElementById("start-fight");
     const listContainer = document.getElementById("list-fighters");
     StorageManager.getFighters(function (fighters) {
       listContainer.innerHTML = "";
       if (!fighters || !fighters.length) {
+        startFight.disabled = true;
         const noEl = document.createElement("div");
         noEl.textContent = "No fighters in this arena!";
         listContainer.appendChild(noEl);
       } else {
+        startFight.disabled = false;
         const children = fighters.map((fighter) => {
           return fighter.getElement();
         });
