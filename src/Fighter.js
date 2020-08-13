@@ -66,7 +66,7 @@ class Fighter {
     gen.style = "display: flex;";
 
     const generation = document.createElement("img");
-    generation.src = "./icons/crown.svg";
+    generation.src = "./icons/skull.svg";
     generation.title = "Generation";
     generation.style =
       "height: 14px; width: 14px; margin-left: 6px; margin-right: 3px;";
