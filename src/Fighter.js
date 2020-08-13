@@ -15,7 +15,7 @@ class Fighter {
   died = () => {
     this.generation++;
     const statIndex = Math.floor(Fighter.STATS.length * Math.random());
-    this[Fighter.STATS[statIndex]] += 0.2;
+    this[Fighter.STATS[statIndex]] += Math.floor(Math.random() * 10) / 10 + 1;
   };
 
   getElement() {

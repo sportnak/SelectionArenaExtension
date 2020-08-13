@@ -6,9 +6,7 @@ class StorageManager {
   }
 
   static insertFighter(name, callback) {
-    console.log("insert:");
     StorageManager.getFighters(function (fighters) {
-      console.log("insert2:", fighters);
       if (
         fighters &&
         fighters.length &&
@@ -38,12 +36,10 @@ class StorageManager {
 
   // Private
   static setFighters(fighters, callback, source) {
-    console.log(fighters, source);
     chrome.storage.local.set({ fighters }, callback);
   }
 
   static removeFighter(name, callback) {
-    console.log("remove:");
     StorageManager.getFighters(function (fighters) {
       StorageManager.setFighters(
         fighters.filter((x) => x.name !== name),
