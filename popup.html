@@ -7,7 +7,7 @@
   }
 
   .fighter-list {
-    transition: height ease 1s;
+    transition: height ease 0.3s, opacity ease 0.3s;
   }
 </style>
 <div
@@ -24,7 +24,7 @@
   <div id="errors" style="color: #d05353;"></div>
   <h4 style="margin-bottom: 8px; cursor: pointer;" id="list-fighters-header">
     Fighters
-    <div class="chevron" id="list-chevron">
+    <div class="chevron" id="list-chevron" style="transform: rotate(180deg);">
       <img
         src="./icons/chevron.svg"
         height="20"
@@ -33,11 +33,7 @@
       />
     </div>
   </h4>
-  <div
-    id="list-fighters"
-    style="height: 0px; overflow: hidden;"
-    class="fighter-list"
-  ></div>
+  <div id="list-fighters" style="overflow: hidden;" class="fighter-list"></div>
   <h4 style="margin-bottom: 12px;">Manage your fighters:</h4>
   <div style="display: flex;">
     <label for="fighter-name">Fighter Name: </label>

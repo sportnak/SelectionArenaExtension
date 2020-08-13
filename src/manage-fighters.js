@@ -1,4 +1,4 @@
-let expandedFighters = false;
+let expandedFighters = true;
 function addFighter() {
   const fighterName = document.getElementById("fighter-name");
   if (!fighterName || !fighterName.value.trim()) {
@@ -35,12 +35,12 @@ function register() {
       if (list) {
         if (expandedFighters) {
           expandedFighters = false;
-          list.style = "height: 0px; overflow: hidden;";
+          list.style = "height: 0px; overflow: hidden; opacity: 0;";
           listChevron.style = "transform: rotate(0deg)";
         } else {
+          expandedFighters = true;
           StorageManager.getFighters(function (fighters) {
-            expandedFighters = true;
-            list.style = `height: ${fighters.length * 16 + 16};`;
+            list.style = `height: ${fighters.length * 16 + 16}px; opacity: 1;`;
             listChevron.style = "transform: rotate(180deg)";
           });
         }
